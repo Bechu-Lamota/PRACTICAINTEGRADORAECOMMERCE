@@ -1,0 +1,22 @@
+Lista de Productos
+
+<table id="products">
+    <tr>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <ht>Borrar</ht>
+    </tr>
+    {{#each products}}
+    <tr>
+        <td>{{this.title}}/td>
+        <td>{{this.price}}</td>
+        <td>{{this.stock}}</td>
+        <td><button class="deleteButton" id="deleteButton_{{this._id}}" onclick="deleteProduct('{{this.id}}')"> Borrar </button></td>
+    </tr>
+    {{/each}}
+
+</table>
+   
+<script src="/socket.io/socket.io.js"></script>
+<script src="../public/js/products.js"></script>

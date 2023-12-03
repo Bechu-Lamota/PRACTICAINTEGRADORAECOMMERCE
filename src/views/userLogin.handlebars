@@ -1,0 +1,34 @@
+<h2>Login</h2>
+
+{{#if hasError}}
+  <p style="color:tomato">{{ error }}</p>
+{{/if}}
+
+<form action="/api/sessions/userLogin" method="POST">
+  Email: <input type="text" name="email"><br><br>
+  Contraseña: <input type="password" name="password"><br><br>
+
+  <input type="submit" value="Iniciar sesión">
+
+</form>
+
+{{!-- PONGO ACÁ LA ACTIVIDAD DE RECUPERACIÓN DE CONTRASEÑA
+--}}
+<table>
+    <tr>
+        <th><a href="/recovery-password"> Olvidé mi Contraseña </a></th>
+    </tr>
+    <tr>
+        <th><p>O</p></th>
+    </tr>
+    <tr>
+        <th><a href="/api/sessions/github"> Entrar con github </a></th>
+    </tr>
+    <tr>
+        <th><p>O</p></th>
+    </tr>
+    <tr>
+    <tr>
+        <th><a href="/register"> Registrate </a></th>
+    </tr>
+</table>
